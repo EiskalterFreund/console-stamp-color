@@ -1,5 +1,4 @@
-# Console-Stamp-\textcolor{green}{C}\textcolor{red}{O}\textcolor{yellow}{L}\textcolor{blue}{O}\textcolor{green}{R} 3
-header-includes: \usepackage{xcolor}
+ # Console-Stamp-<span style="color:#FF0000">C</span><span style="color:#CCFF00">O</span><span style="color:#00FF66">L</span><span style="color:#0066FF">O</span><span style="color:#CC00FF">R</span> 3
 
 [![npm][npm-image]][npm-url]
 [![downloads][downloads-image]][npm-url]
