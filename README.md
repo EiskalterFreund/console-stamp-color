@@ -23,7 +23,7 @@ npm install console-stamp
 You need to provide the console object to `console-stamp` in order to patch the builtin console.
 
 ```js
-require( 'console-stamp' )( console );
+require( 'console-stamp-color' )( console );
 
 console.log('Hello, World!');
 ```
@@ -35,7 +35,7 @@ The default behaviour is to add a prefix to each log statement with timestamp in
 You can change this by provinding an [options](#options) object as the second parameter.
 
 ```js
-require('console-stamp')(console, { 
+require('console-stamp-color')(console, { 
     format: ':date(yyyy/mm/dd HH:MM:ss.l)' 
 } );
 
@@ -49,7 +49,7 @@ console.log('Hello, World!');
 Notice how the log level is suddenly missing. You need to add it specifically to the format string.
 
 ```js
-require('console-stamp')(console, { 
+require('console-stamp-color')(console, { 
     format: ':date(yyyy/mm/dd HH:MM:ss.l) :label' 
 } );
 
@@ -73,7 +73,7 @@ const output = fs.createWriteStream('./stdout.log');
 const errorOutput = fs.createWriteStream('./stderr.log');
 const logger = new console.Console(output, errorOutput);
 
-require('console-stamp')(logger, {
+require('console-stamp-color')(logger, {
     stdout: output,
     stderr: errorOutput
 });
@@ -113,12 +113,12 @@ Here are some examples on how to customize your log statements with `console-sta
 Without any other customizations you can provide the timestamp format directly.
 
 ```js
-require('console-stamp')( console, 'yyyy/mm/dd HH:MM:ss.l' );
+require('console-stamp-color')( console, 'yyyy/mm/dd HH:MM:ss.l' );
 ```
 To set the timestamp format using the [options](#options) object you can use the `date` token.
 
 ```js
-require('console-stamp')(console, { 
+require('console-stamp-color')(console, { 
     format: ':date(yyyy/mm/dd HH:MM:ss.l)' 
 } );
 
@@ -134,14 +134,14 @@ console.log('Hello, World!');
 `console-stamp` uses the excellent [chalk](https://www.npmjs.com/package/chalk) library to provide coloured output and other styling.
 
 ```js
-require( 'console-stamp' )( console, {
+require( 'console-stamp-color' )( console, {
     format: ':date().blue.bgWhite.underline :label(7)'
 } );
 ```
 You can also simply place some text in parenthesis, and then add your styling to that.
 
 ```js
-require( 'console-stamp' )( console, {
+require( 'console-stamp-color' )( console, {
     format: '(->).yellow :date().blue.bgWhite.underline :label(7)'
 } );
 ```
@@ -182,7 +182,7 @@ There are only three predefined tokens registered by default. These are:
 To define your own token, simply add a callback function with the token name to the tokens option. This callback function is expected to return a string. The value returned is then available as ":foo()" in this case:
 
 ```javascript
-require( 'console-stamp' )( console, {
+require( 'console-stamp-color' )( console, {
     format: ':foo() :label(7)',
     tokens:{
         foo: () => {
@@ -215,7 +215,7 @@ Here we are making a custom date token called `mydate` using moment.js to format
 const moment = require('moment');
 moment.locale('ja');
 
-require( 'console-stamp' )( console, {
+require( 'console-stamp-color' )( console, {
     format: ':mydate() :label(7)',
     tokens:{
         mydate: () => {
@@ -269,7 +269,7 @@ console.fatal = function(msg) {
 }
 
 // Initialising the output formatter
-require( 'console-stamp' )( console, {
+require( 'console-stamp-color' )( console, {
     extend: {
         fatal: 1
     }
@@ -282,7 +282,7 @@ require( 'console-stamp' )( console, {
 
 ### API
 ```js
-require( 'console-stamp' )( console, [options] );
+require( 'console-stamp-color' )( console, [options] );
 ```
 
 #### console
