@@ -1,5 +1,5 @@
 {
-  "name": "console-stamp",
+  "name": "console-stamp-color",
   "main": "index.js",
   "version": "3.0.3",
   "scripts": {
@@ -13,11 +13,15 @@
     "node": ">=10"
   },
   "author": {
-    "name": "Ståle Raknes",
-    "email": "stale@raknes.net",
-    "url": "http://github.com/starak"
+    "name": "EiskalterFreund",
+    "email": "engin@purenodes.net",
+    "url": "http://github.com/EiskalterFreund"
   },
   "contributors": [
+    {
+      "name": "EiskalterFreund",
+      "url": "http://github.com/EiskalterFreund"
+    },
     {
       "name": "Ståle Raknes",
       "url": "http://github.com/starak"
@@ -61,11 +65,12 @@
     "timestamp",
     "log",
     "jslog",
-    "debug"
+    "debug",
+    "color"
   ],
   "repository": {
     "type": "git",
-    "url": "http://github.com/starak/node-console-stamp.git"
+    "url": "http://github.com/EiskalterFreund/console-stamp-color.git"
   },
   "license": "MIT",
   "dependencies": {
