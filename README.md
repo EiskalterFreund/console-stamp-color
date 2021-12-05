@@ -15,7 +15,7 @@ This module lets you take control over the output from `console` logging methods
 
 ### Install
 ```console
-npm install console-stamp
+npm install console-stamp-color
 ```
 
 ### Patching the console
