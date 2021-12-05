@@ -1,4 +1,4 @@
-# Console-stamp 3
+# Console-Stamp-\textcolor{green}{C}\textcolor{red}{O}\textcolor{yellow}{L}\textcolor{blue}{O}\textcolor{green}{R} 3
 
 [![npm][npm-image]][npm-url]
 [![downloads][downloads-image]][npm-url]
